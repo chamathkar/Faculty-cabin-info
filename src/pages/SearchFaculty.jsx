@@ -19,10 +19,13 @@ export default function SearchFaculty() {
     navigate({ search: params.toString() }, { replace: true });
   }, [term, navigate]);
 
-  const match = useMemo(() => {
+  // ✅ Return only top 6 matches
+  const matches = useMemo(() => {
     const t = term.trim().toLowerCase();
-    if (!t) return null;
-    return facultyData.find((f) => f.name.toLowerCase().includes(t)) || null;
+    if (!t) return [];
+    return facultyData
+      .filter((f) => f.name.toLowerCase().includes(t))
+      .slice(0, 6); // 👈 Limit results to first 6
   }, [term]);
 
   return (
@@ -89,28 +92,32 @@ export default function SearchFaculty() {
         <p className="text-sm text-gray-600">
           Start typing to search for a faculty member.
         </p>
-      ) : match ? (
-        <Link to={`/faculty/${match.id}`} key={match.id}>
-          <div className="bg-white rounded-xl shadow p-6 flex items-center gap-6 hover:shadow-lg transition cursor-pointer">
-            <img
-              src={match.image}
-              alt={match.name}
-              className="w-20 h-20 object-cover rounded-2xl"
-            />
-            <div className="flex-1">
-              <div className="text-xl font-bold text-indigo-800">
-                {match.name}
+      ) : matches.length > 0 ? (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {matches.map((faculty) => (
+            <Link to={`/faculty/${faculty.id}`} key={faculty.id}>
+              <div className="bg-white rounded-xl shadow p-6 flex items-center gap-6 hover:shadow-lg transition cursor-pointer">
+                <img
+                   src={faculty.avatar}
+                   alt={faculty.name}
+                  className="w-20 h-20 object-cover rounded-2xl border border-indigo-100 shadow"
+                />
+                <div className="flex-1">
+                  <div className="text-xl font-bold text-indigo-800">
+                    {faculty.name}
+                  </div>
+                  <div className="text-gray-600">School: {faculty.school}</div>
+                  <div className="text-sm text-indigo-600">
+                    Email: {faculty.email}
+                  </div>
+                </div>
+                <div className="text-indigo-700 font-medium">
+                  Cabin: {faculty.cabin}
+                </div>
               </div>
-              <div className="text-gray-600">School: {match.school}</div>
-              <div className="text-sm text-indigo-600">
-                Email: {match.email}
-              </div>
-            </div>
-            <div className="text-indigo-700 font-medium">
-              Cabin: {match.cabin}
-            </div>
-          </div>
-        </Link>
+            </Link>
+          ))}
+        </div>
       ) : (
         <div className="rounded-lg border border-dashed p-6 text-center text-gray-600">
           No faculty found.
