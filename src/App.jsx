@@ -61,7 +61,7 @@ export default function App() {
                   initial={{ x: 0, opacity: 1 }}
                   animate={{ x: 0, opacity: 1 }}
                   exit={{ x: "-60vw", opacity: 0 }}
-                  transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+                  transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
                 >
                   <FacultyList />
                 </motion.div>
@@ -74,9 +74,35 @@ export default function App() {
                   initial={{ x: "60vw", opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   exit={{ x: "-60vw", opacity: 0 }}
-                  transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+                  transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
                 >
                   <SearchFaculty />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/search"
+              element={
+                <motion.div
+                  initial={{ x: "60vw", opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: "-60vw", opacity: 0 }}
+                  transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+                >
+                  <FacultyList />
+                </motion.div>
+              }
+            />
+            <Route
+              path="/search"
+              element={
+                <motion.div
+                  initial={{ x: "60vw", opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: "-60vw", opacity: 0 }}
+                  transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+                >
+                  <FacultyDetail />
                 </motion.div>
               }
             />
