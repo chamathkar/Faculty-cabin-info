@@ -10,27 +10,27 @@ export default function App() {
 
   return (
     <div className="min-h-screen font-sans bg-gradient-to-br from-indigo-50 via-violet-50 to-white flex flex-col">
+      {/* HEADER */}
       <header
         className="sticky top-0 z-20 bg-gradient-to-r from-indigo-600 via-violet-600 to-indigo-500/90 backdrop-blur border-b border-violet-200 shadow-lg w-full"
         style={{ height: "80px" }}
       >
-        {/* relative so nav can be centered absolutely */}
-        <div className="w-full px-10 py-6 flex items-center justify-between h-full relative">
-          {/* Left side — logo */}
+        <div className="w-full px-6 sm:px-10 py-6 flex items-center justify-between h-full relative">
+          {/* LEFT — Logo (hidden on small screens) */}
           <NavLink
             to="/"
-            className="text-4xl font-extrabold tracking-tight text-white drop-shadow hover:opacity-90 transition-opacity"
+            className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white drop-shadow hover:opacity-90 transition-opacity hidden sm:block"
             style={{ marginLeft: "2%" }}
           >
             Where's sir?😄
           </NavLink>
 
-          {/* Center — navigation */}
-          <nav className="absolute left-1/2 transform -translate-x-1/2 flex gap-6 text-xl">
+          {/* CENTER — Navigation (always visible) */}
+          <nav className="absolute left-1/2 transform -translate-x-1/2 flex gap-4 sm:gap-6 text-lg sm:text-xl">
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `px-4 py-2 rounded-lg font-medium transition-colors ${
+                `px-3 sm:px-4 py-2 rounded-lg font-medium transition-colors ${
                   isActive
                     ? "bg-white/90 text-indigo-700 shadow"
                     : "text-white hover:bg-white/20 hover:text-white"
@@ -42,7 +42,7 @@ export default function App() {
             <NavLink
               to="/search"
               className={({ isActive }) =>
-                `px-4 py-2 rounded-lg font-medium transition-colors ${
+                `px-3 sm:px-4 py-2 rounded-lg font-medium transition-colors ${
                   isActive
                     ? "bg-white/90 text-indigo-700 shadow"
                     : "text-white hover:bg-white/20 hover:text-white"
@@ -55,7 +55,8 @@ export default function App() {
         </div>
       </header>
 
-      <main className="w-full px-6 py-10 flex-1">
+      {/* MAIN CONTENT */}
+      <main className="w-full px-4 sm:px-6 py-8 sm:py-10 flex-1">
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>
             <Route
@@ -89,39 +90,44 @@ export default function App() {
         </AnimatePresence>
       </main>
 
+      {/* FOOTER */}
       <footer
-        className="w-full bg-gradient-to-r from-indigo-600 via-violet-600 to-indigo-500/90 border-t border-violet-200 shadow-lg flex items-center justify-between px-10"
-        style={{ height: "80px" }}
+        className="w-full bg-gradient-to-r from-indigo-600 via-violet-600 to-indigo-500/90 border-t border-violet-200 shadow-lg flex flex-col sm:flex-row items-center justify-between px-6 sm:px-10 py-4 sm:py-0 gap-3"
+        style={{ minHeight: "80px" }}
       >
-        <span className="text-white text-lg font-medium">
+        <span className="text-white text-base sm:text-lg font-medium text-center sm:text-left">
           &copy; {year} Faculty Cabin Finder (Where's sir?😄)
         </span>
 
-        <div className="flex gap-8 items-center">
-          <span className="text-white text-lg font-medium">Connect with us :</span>
+        <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-8 items-center">
+          <span className="text-white text-base sm:text-lg font-medium">
+            Connect with us:
+          </span>
+
           <a
             href="https://www.linkedin.com/in/chamathkar/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-white hover:text-indigo-200 text-lg font-medium transition"
+            className="flex items-center gap-2 text-white hover:text-indigo-200 text-base sm:text-lg font-medium transition"
           >
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
               alt="LinkedIn"
-              className="w-7 h-7"
+              className="w-6 h-6 sm:w-7 sm:h-7"
             />
             Chamathkar
           </a>
+
           <a
             href="https://www.linkedin.com/in/aditya-pranihith-keerthy/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-white hover:text-indigo-200 text-lg font-medium transition"
+            className="flex items-center gap-2 text-white hover:text-indigo-200 text-base sm:text-lg font-medium transition"
           >
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
               alt="LinkedIn"
-              className="w-7 h-7"
+              className="w-6 h-6 sm:w-7 sm:h-7"
             />
             Aditya
           </a>
