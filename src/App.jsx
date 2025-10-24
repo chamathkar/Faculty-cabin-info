@@ -14,15 +14,19 @@ export default function App() {
         className="sticky top-0 z-20 bg-gradient-to-r from-indigo-600 via-violet-600 to-indigo-500/90 backdrop-blur border-b border-violet-200 shadow-lg w-full"
         style={{ height: "80px" }}
       >
-        <div className="w-full px-10 py-6 flex items-center justify-between h-full">
+        {/* relative so nav can be centered absolutely */}
+        <div className="w-full px-10 py-6 flex items-center justify-between h-full relative">
+          {/* Left side — logo */}
           <NavLink
             to="/"
-            className="text-5xl font-extrabold tracking-tight text-white drop-shadow hover:opacity-90 transition-opacity"
-            style={{ marginLeft: "15%" }} // Move to about 30% from the left
+            className="text-4xl font-extrabold tracking-tight text-white drop-shadow hover:opacity-90 transition-opacity"
+            style={{ marginLeft: "2%" }}
           >
             Where's sir?😄
           </NavLink>
-          <nav className="flex gap-4 text-xl">
+
+          {/* Center — navigation */}
+          <nav className="absolute left-1/2 transform -translate-x-1/2 flex gap-6 text-xl">
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -80,32 +84,6 @@ export default function App() {
                 </motion.div>
               }
             />
-            <Route
-              path="/search"
-              element={
-                <motion.div
-                  initial={{ x: "60vw", opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  exit={{ x: "-60vw", opacity: 0 }}
-                  transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-                >
-                  <FacultyList />
-                </motion.div>
-              }
-            />
-            <Route
-              path="/search"
-              element={
-                <motion.div
-                  initial={{ x: "60vw", opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  exit={{ x: "-60vw", opacity: 0 }}
-                  transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
-                >
-                  <FacultyDetail />
-                </motion.div>
-              }
-            />
             <Route path="/faculty/:id" element={<FacultyDetail />} />
           </Routes>
         </AnimatePresence>
@@ -118,7 +96,7 @@ export default function App() {
         <span className="text-white text-lg font-medium">
           &copy; {year} Faculty Cabin Finder (Where's sir?😄)
         </span>
-        
+
         <div className="flex gap-8 items-center">
           <span className="text-white text-lg font-medium">Connect with us :</span>
           <a
