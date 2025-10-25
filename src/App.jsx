@@ -96,7 +96,7 @@ export default function App() {
         style={{ minHeight: "80px" }}
       >
         <span className="text-white text-base sm:text-lg font-medium text-center sm:text-left">
-          &copy; {year} Faculty Cabin Finder (Where's sir?😄)
+          &copy; {year} Where's sir?😄- Now available with faculty rating
         </span>
 
         <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-8 items-center">

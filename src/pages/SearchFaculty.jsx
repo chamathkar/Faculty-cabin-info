@@ -33,7 +33,7 @@ export default function SearchFaculty() {
       <div className="flex items-center justify-between gap-4">
         <div>
           <h1 className="text-4xl font-extrabold tracking-tight text-indigo-700 drop-shadow mb-2">
-            🔍 Instantly Find Any Faculty Cabin!
+            🔍 Instantly Find Any Faculty Information!
           </h1>
           <p className="text-base text-violet-600">
             Start typing a faculty name and unlock their location in seconds.
@@ -90,7 +90,7 @@ export default function SearchFaculty() {
 
       {term.trim() === "" ? (
         <p className="text-sm text-gray-600">
-          Start typing to search for a faculty member.
+          Start typing to search for a faculty Information.
         </p>
       ) : matches.length > 0 ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
