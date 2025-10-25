@@ -2,73 +2,73 @@ export const facultyData = [
   {
     "id": 1,
     "name": "Dr. Hari Seetha",
-    "school": "Will be updated soon",
+    "school": "SCOPE",
     "cabin": "CB: 222",
-    "email": "example@gmail.com",
+    "email": "seetha.hari@vitap.ac.in",
     "avatar": "images/image2.jpg"
   },
   {
     "id": 2,
     "name": "Dr. Soubhagya Sankar Barpanda",
-    "school": "Will be updated soon",
+    "school": "SCOPE",
     "cabin": "CB: 427-C",
-    "email": "example@gmail.com",
+    "email": "soubhagya.barpanda@vitap.ac.in",
     "avatar": "images/image2.jpg"
   },
   {
     "id": 3,
     "name": "Dr. Ajith Jubilson E",
-    "school": "Will be updated soon",
+    "school": "SCOPE",
     "cabin": "CB: 407-D",
-    "email": "example@gmail.com",
+    "email": "ajith.jubilson@vitap.ac.in",
     "avatar": "images/image2.jpg"
   },
   {
     "id": 4,
     "name": "Dr. Hussain Syed",
-    "school": "Will be updated soon",
+    "school": "SCOPE",
     "cabin": "CB: 227-D",
-    "email": "example@gmail.com",
+    "email": "hussain.syed@vitap.ac.in",
     "avatar": "images/image2.jpg"
   },
   {
     "id": 5,
     "name": "Dr. Deepasikha Mishra",
-    "school": "Will be updated soon",
+    "school": "SCOPE",
     "cabin": "AB-1; 326-G",
-    "email": "example@gmail.com",
+    "email": "deepasikha.mishra@vitap.ac.in",
     "avatar": "images/image2.jpg"
   },
   {
     "id": 6,
     "name": "Dr. Saroj Kumar Panigrahy",
-    "school": "Will be updated soon",
+    "school": "SCOPE",
     "cabin": "CB: 320-B",
-    "email": "example@gmail.com",
+    "email": "saroj.panigrahy@vitap.ac.in",
     "avatar": "images/image2.jpg"
   },
   {
     "id": 7,
     "name": "Dr. Asish Kumar Dalai",
-    "school": "Will be updated soon",
+    "school": "SCOPE",
     "cabin": "CB: 327-K",
-    "email": "example@gmail.com",
+    "email": "asish.d@vitap.ac.in",
     "avatar": "images/image2.jpg"
   },
   {
     "id": 8,
     "name": "Dr. Ravi Sankar Barpanda",
-    "school": "Will be updated soon",
+    "school": "SCOPE",
     "cabin": "CB: 115-A",
-    "email": "example@gmail.com",
+    "email": " ravi.barpanda@vitap.ac.in",
     "avatar": "images/image2.jpg"
   },
   {
     "id": 9,
     "name": "Dr. Hari Kishan Kondaveeti",
-    "school": "Will be updated soon",
+    "school": "SCOPE",
     "cabin": "CB: G05-B",
-    "email": "example@gmail.com",
+    "email": "kishan.kondaveeti@vitap.ac.in",
     "avatar": "images/image2.jpg"
   },
   {
@@ -82,49 +82,49 @@ export const facultyData = [
   {
     "id": 11,
     "name": "Dr. Sibi Chakravarthy S",
-    "school": "Will be updated soon",
+    "school": "SCOPE",
     "cabin": "CB: 222",
-    "email": "example@gmail.com",
+    "email": "chakkaravarthy.sibi@vitap.ac.in",
     "avatar": "images/image2.jpg"
   },
   {
     "id": 12,
     "name": "Dr. Sudhakar Ilango S",
-    "school": "Will be updated soon",
+    "school": "SCOPE",
     "cabin": "CB: 320-C",
-    "email": "example@gmail.com",
+    "email": "sudhakar.ilango@vitap.ac.in",
     "avatar": "images/image2.jpg"
   },
   {
     "id": 13,
     "name": "Dr. Aravapalli Rama Satish",
-    "school": "Will be updated soon",
+    "school": "SCOPE",
     "cabin": "CB: 408-H",
-    "email": "example@gmail.com",
+    "email": "rama.satish@vitap.ac.in",
     "avatar": "images/image2.jpg"
   },
   {
     "id": 14,
     "name": "Dr. Devarakonda Nagaraju",
-    "school": "Will be updated soon",
+    "school": "SCOPE",
     "cabin": "CB: G05-G",
-    "email": "example@gmail.com",
+    "email": "nagaraju.devarakonda@vitap.ac.in",
     "avatar": "images/image2.jpg"
   },
   {
     "id": 15,
     "name": "Dr. Gopikrishnan S",
-    "school": "Will be updated soon",
+    "school": "SCOPE",
     "cabin": "CB: G05-C",
-    "email": "example@gmail.com",
+    "email": "gopikrishnan.s@vitap.ac.in",
     "avatar": "images/image2.jpg"
   },
   {
     "id": 16,
     "name": "Dr. Jonnadula Harikiran",
-    "school": "Will be updated soon",
+    "school": "SCOPE",
     "cabin": "CB: 103-F",
-    "email": "example@gmail.com",
+    "email": "harikiran.j@vitap.ac.in",
     "avatar": "images/image2.jpg"
   },
   {
