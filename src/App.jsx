@@ -99,7 +99,7 @@ export default function App() {
           &copy; {year} Where's sir?😄- Now available with faculty rating
         </span>
 
-        <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-8 items-center">
+        {/* <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-8 items-center">
           <span className="text-white text-base sm:text-lg font-medium">
             Connect with us:
           </span>
@@ -131,6 +131,9 @@ export default function App() {
             />
             Aditya
           </a>
+        </div> */}
+        <div className="text-white text-base sm:text-lg font-medium text-center sm:text-left">Powered by    
+          <a href="https://access-papers.vercel.app/homepage.html"><strong>    PYQ NEST:</strong></a> know their cabin, rate their style!!!
         </div>
       </footer>
     </div>
