@@ -144,9 +144,9 @@ const Rating = ({ id }) => {
   const AverageDisplay = ({ label, average, count }) => {
     let textColor = "text-gray-800";
     if (average > 0) {
-      if (average < 3) textColor = "text-red-500";
-      else if (average >= 3 && average < 4) textColor = "text-yellow-500";
-      else if (average >= 4) textColor = "text-green-500";
+      if (average < 2.5) textColor = "text-red-500";
+      else if (average >= 2.5 && average < 3.5) textColor = "text-yellow-500";
+      else if (average >= 3.5) textColor = "text-green-500";
     }
     return (
       <div className="text-center bg-indigo-50 p-4 rounded-lg shadow-sm">
