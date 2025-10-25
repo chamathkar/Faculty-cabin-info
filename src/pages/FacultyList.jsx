@@ -28,6 +28,7 @@ export default function FacultyList() {
             <p className="text-base text-violet-600 mt-1">
               Browse the list and click to view details of your faculty.
             </p>
+            <span className="text-base text-red-500">Note that <strong>APC Faculty</strong> and <strong>Research Scholars</strong> are not inculded here</span>
           </div>
         </div>
       </div>
