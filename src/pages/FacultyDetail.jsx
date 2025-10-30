@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { facultyData } from "../data/facultyData.js";
 import Rating from "./Rating.jsx";
-
+import avatar from "../pages/image2.jpg"
 export default function FacultyDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -32,14 +32,15 @@ export default function FacultyDetail() {
 
       <div className="flex flex-col md:flex-row gap-10 max-w-5xl mx-auto">
         {/* Left column: Avatar + Info */}
-        <div className="w-full md:w-2/5 flex flex-col gap-6">
+        <div className="w-full md:w-2/5 flex flex-col gap-12">
           <div className="flex-shrink-0">
             <img
-              src={faculty.avatar}
+              src={avatar}
               alt={faculty.name}
               className="w-full aspect-square rounded-2xl object-cover shadow-lg border-4 border-indigo-100 bg-indigo-50"
             />
           </div>
+
 
           <div>
             <h1 className="text-4xl font-bold mb-6 text-indigo-800">{faculty.name}</h1>
