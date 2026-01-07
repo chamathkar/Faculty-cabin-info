@@ -29,6 +29,8 @@ export default function FacultyList() {
               Browse the list and click to view details of your faculty.
             </p>
             <span className="text-base text-red-500">Note that <strong>APC Faculty</strong> and <strong>Research Scholars</strong> are not inculded here.</span>
+            <br></br>
+            <span className="text-base text-red-500">VITANS favourite website with over 800 ratings</span>
           </div>
         </div>
       </div>
@@ -43,7 +45,7 @@ export default function FacultyList() {
             <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center justify-center transition-transform hover:scale-105 hover:shadow-2xl border border-violet-100 w-full h-full">
               <div className="w-4/5 aspect-square mb-4">
                 <img
-                  src={f.avatar}
+                  src={f.photo_url}
                   alt={f.name}
                   className="w-full h-full object-cover rounded-2xl border-4 border-indigo-100 shadow"
                 />
@@ -53,7 +55,7 @@ export default function FacultyList() {
               </h3>
               <p className="text-violet-500 mb-2 text-center">{f.department}</p>
               <span className="text-base text-gray-500 text-center">
-                {f.cabin}
+                {f.office}
               </span>
             </div>
           </Link>

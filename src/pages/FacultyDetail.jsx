@@ -35,7 +35,7 @@ export default function FacultyDetail() {
         <div className="w-full md:w-2/5 flex flex-col gap-12">
           <div className="flex-shrink-0">
             <img
-              src={avatar}
+              src={faculty.photo_url}
               alt={faculty.name}
               className="w-full aspect-square rounded-2xl object-cover shadow-lg border-4 border-indigo-100 bg-indigo-50"
             />
@@ -47,11 +47,15 @@ export default function FacultyDetail() {
 
             <div className="mb-4">
               <span className="font-semibold text-indigo-900 text-2xl">Cabin:</span>{" "}
-              <span className="text-violet-700 text-2xl">{faculty.cabin}</span>
+              <span className="text-violet-700 text-2xl">{faculty.office}</span>
+            </div>
+            <div className="mb-4">
+              <span className="font-semibold text-indigo-900 text-2xl">Designation:</span>{" "}
+              <span className="text-violet-700 text-2xl">{faculty.designation}</span>
             </div>
             <div className="mb-4">
               <span className="font-semibold text-indigo-900 text-2xl">School:</span>{" "}
-              <span className="text-violet-700 text-2xl">{faculty.school}</span>
+              <span className="text-violet-700 text-2xl">{faculty.department}</span>
             </div>
             <div className="mb-4">
               <span className="font-semibold text-indigo-900 text-2xl">Email:</span>{" "}

@@ -21,12 +21,17 @@ export default function SearchFaculty() {
 
   // ✅ Return only top 6 matches
   const matches = useMemo(() => {
-    const t = term.trim().toLowerCase();
-    if (!t) return [];
-    return facultyData
-      .filter((f) => f.name.toLowerCase().includes(t))
-      .slice(0, 6); // 👈 Limit results to first 6
-  }, [term]);
+  const t = term.trim().toLowerCase();
+  if (!t) return [];
+
+  return facultyData
+    .filter((f) => {
+      const name = (f?.name || "").toLowerCase();
+      return name.includes(t);
+    })
+    .slice(0, 6);
+}, [term]);
+
 
   return (
     <div className="space-y-6">
@@ -98,7 +103,7 @@ export default function SearchFaculty() {
             <Link to={`/faculty/${faculty.id}`} key={faculty.id}>
               <div className="bg-white rounded-xl shadow p-6 flex items-center gap-6 hover:shadow-lg transition cursor-pointer">
                 <img
-                   src={faculty.avatar}
+                   src={faculty.photo_url}
                    alt={faculty.name}
                   className="w-20 h-20 object-cover rounded-2xl border border-indigo-100 shadow"
                 />
@@ -106,13 +111,13 @@ export default function SearchFaculty() {
                   <div className="text-xl font-bold text-indigo-800">
                     {faculty.name}
                   </div>
-                  <div className="text-gray-600">School: {faculty.school}</div>
+                  <div className="text-gray-600">School: {faculty.department}</div>
                   <div className="text-sm text-indigo-600">
                     Email: {faculty.email}
                   </div>
                 </div>
                 <div className="text-indigo-700 font-medium">
-                  Cabin: {faculty.cabin}
+                  Cabin: {faculty.office}
                 </div>
               </div>
             </Link>
