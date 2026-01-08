@@ -29,8 +29,7 @@ export default function FacultyList() {
               Browse the list and click to view details of your faculty.
             </p>
             <span className="text-base text-red-500">Note that <strong>APC Faculty</strong> and <strong>Research Scholars</strong> are not inculded here.</span>
-            <br></br>
-            <span className="text-base text-red-500">VITANS favourite website with over 800 ratings</span>
+            
           </div>
         </div>
       </div>
