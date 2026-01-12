@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { facultyData } from "../data/facultyData.js";
 import Rating from "./Rating.jsx";
-import avatar from "../pages/image2.jpg"
+
 export default function FacultyDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -21,8 +21,35 @@ export default function FacultyDetail() {
     );
   }
 
+  // ⭐ SHARE AS TEXT TO WHATSAPP ⭐
+  const handleShare = () => {
+const message = `
+Faculty Profile
+--------------------------
+Name: ${faculty.name}
+Designation: ${faculty.designation}
+School: ${faculty.department}
+Cabin: ${faculty.office}
+Email: ${faculty.email}
+
+Profile Link:
+${window.location.href}
+
+==========================
+   Shared via "WHERE'S SIR?" — Faculty Cabin Finder
+   Find your prof faster than the CB lift screams ‘OVERLOAD’.
+==========================
+`;
+
+
+    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <div className="min-h-screen font-sans bg-gradient-to-br from-indigo-50 via-violet-50 to-white px-6 py-10">
+
+      {/* BACK BUTTON */}
       <button
         className="mb-8 text-lg text-indigo-600 hover:text-violet-700 flex items-center gap-2"
         onClick={() => navigate(-1)}
@@ -30,8 +57,24 @@ export default function FacultyDetail() {
         <span className="text-2xl">&lt;</span> Back
       </button>
 
+      {/* SHARE ON WHATSAPP BUTTON */}
+      <div className="flex justify-end max-w-5xl mx-auto mb-6">
+        <button
+          onClick={handleShare}
+          className="px-5 py-2 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl shadow-md flex items-center gap-2"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+            className="w-6 h-6"
+            alt="whatsapp"
+          />
+          Share on WhatsApp
+        </button>
+      </div>
+
       <div className="flex flex-col md:flex-row gap-10 max-w-5xl mx-auto">
-        {/* Left column: Avatar + Info */}
+
+        {/* LEFT COLUMN */}
         <div className="w-full md:w-2/5 flex flex-col gap-12">
           <div className="flex-shrink-0">
             <img
@@ -41,7 +84,6 @@ export default function FacultyDetail() {
             />
           </div>
 
-
           <div>
             <h1 className="text-4xl font-bold mb-6 text-indigo-800">{faculty.name}</h1>
 
@@ -49,14 +91,17 @@ export default function FacultyDetail() {
               <span className="font-semibold text-indigo-900 text-2xl">Cabin:</span>{" "}
               <span className="text-violet-700 text-2xl">{faculty.office}</span>
             </div>
+
             <div className="mb-4">
               <span className="font-semibold text-indigo-900 text-2xl">Designation:</span>{" "}
               <span className="text-violet-700 text-2xl">{faculty.designation}</span>
             </div>
+
             <div className="mb-4">
               <span className="font-semibold text-indigo-900 text-2xl">School:</span>{" "}
               <span className="text-violet-700 text-2xl">{faculty.department}</span>
             </div>
+
             <div className="mb-4">
               <span className="font-semibold text-indigo-900 text-2xl">Email:</span>{" "}
               <span className="text-violet-700 text-2xl">{faculty.email}</span>
@@ -64,7 +109,7 @@ export default function FacultyDetail() {
           </div>
         </div>
 
-        {/* Right column: Rating */}
+        {/* RIGHT COLUMN (Rating) */}
         <div className="w-full md:w-3/5 self-start">
           <Rating id={id} />
         </div>
