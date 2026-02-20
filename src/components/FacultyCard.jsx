@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function FacultyCard({ faculty }) {
   useEffect(() => {
-      fetch("http://localhost:3000/api/faculty")
+      fetch("/api/faculty")
         .then(res => res.json())
         .then(data => {
           setFacultyData(data);

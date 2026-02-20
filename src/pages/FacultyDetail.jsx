@@ -10,7 +10,7 @@ export default function FacultyDetail() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/faculty")
+    fetch("/api/faculty")
       .then(res => res.json())
       .then(data => {
         const found = data.find(f => String(f.id) === String(id));
