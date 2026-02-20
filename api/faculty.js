@@ -9,6 +9,8 @@ export default async function handler(req, res) {
   }
 
   try {
+     // 🔍 DEBUG LINE 
+    console.log("STRAPI TOKEN EXISTS:", !!process.env.STRAPI_TOKEN);
     const response = await fetch(
       "https://cms.vitap.ac.in/api/faculty-profiles?fields[0]=Name&fields[1]=Designation&fields[2]=Office_Address&fields[3]=EMAIL&fields[4]=Department&populate[Photo][fields][0]=url&sort=Employee_Id:ASC",
       {
