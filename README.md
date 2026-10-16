@@ -90,7 +90,7 @@ Cache-Control: s-maxage=600, stale-while-revalidate
 | Request Type | Response Time |
 |--------------|---------------|
 | First Request | ~4 seconds |
-| Cached Requests | ~50–150 ms |
+| Cached Requests | ~50–200 ms |
 
 ---
 
