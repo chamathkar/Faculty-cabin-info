@@ -15,7 +15,7 @@ Students can also **rate faculty members based on teaching quality, correction s
 
 # 🌐 Live Demo
 
-👉 https://faculty-cabin-info.vercel.app
+👉 https://faculty-cabins-info.vercel.app/
 
 ---
 
