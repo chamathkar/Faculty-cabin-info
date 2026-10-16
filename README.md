@@ -94,6 +94,20 @@ Cache-Control: s-maxage=600, stale-while-revalidate
 
 ---
 
+# 🔥 Firebase Usage
+
+Firestore usage over the last 30 days (**Nov 13 – Dec 13**):
+
+| Operation | Total |
+|-----------|------:|
+| Reads | 25,000 |
+| Writes | 869 |
+| Deletes | 1 |
+
+![Firebase Firestore usage statistics](public/images/Firebase%20stats.jpg)
+
+---
+
 # 🛠 Tech Stack
 
 ### Frontend
