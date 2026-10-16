@@ -46,11 +46,12 @@ export default async function handler(req, res) {
         item.attributes.Photo?.data?.attributes?.url || null
     }));
 
-    // 🔥 Vercel Edge Cache
+    // Vercel Edge Cache
     res.setHeader(
       "Cache-Control",
-      "s-maxage=600, stale-while-revalidate"
+      "s-maxage=6000, stale-while-revalidate=60"
     );
+    
 
     return res.status(200).json(simplified);
 
